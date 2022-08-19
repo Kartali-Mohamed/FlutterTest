@@ -12,7 +12,7 @@ class LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
       ),
       body: Container(
         margin: EdgeInsets.all(15),
@@ -22,34 +22,34 @@ class LoginState extends State<Login> {
             children: [
               TextFormField(
                 maxLines: 1,
-                style: TextStyle(fontSize: 18),
-                decoration: InputDecoration(
+                style: const TextStyle(fontSize: 18),
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Email",
                   suffixIcon: Icon(Icons.email),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
                 maxLines: 1,
                 obscureText: true,
-                style: TextStyle(fontSize: 18),
-                decoration: InputDecoration(
+                style: const TextStyle(fontSize: 18),
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Password",
                   suffixIcon: Icon(Icons.visibility),
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: Row(
                   children: [
-                    Text("if you haven't an account "),
+                    const Text("if you haven't an account "),
                     InkWell(
                       onTap: () {
                         Navigator.of(context).pushReplacementNamed("signup");
                       },
-                      child: Text(
+                      child: const Text(
                         "Click here",
                         style: TextStyle(color: Colors.blue),
                       ),
@@ -63,7 +63,7 @@ class LoginState extends State<Login> {
                   onPressed: () {
                     Navigator.of(context).pushReplacementNamed("home");
                   },
-                  child: Text(
+                  child: const Text(
                     "Login",
                     style: TextStyle(fontSize: 20),
                   ),
